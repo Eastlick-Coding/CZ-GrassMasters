@@ -193,16 +193,17 @@ h1 {
 .service-highlights {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.7rem;
-    margin-top: 2rem;
+    gap: 0.55rem;
+    margin-top: 1.65rem;
 }
 
 .service-highlights span {
-    padding: 0.72rem 0.9rem;
+    padding: 0.56rem 0.78rem;
     border: 1px solid rgba(53, 134, 0, 0.2);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.58);
     color: var(--grass-dark);
+    font-size: 0.9rem;
     font-weight: 800;
 }
 
@@ -271,6 +272,11 @@ textarea {
     font-weight: 600;
     outline: none;
     transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+select {
+    min-height: 2.75rem;
+    padding-block: 0.62rem;
 }
 
 ::placeholder,
@@ -511,9 +517,14 @@ footer span {
     font-size: 0.92rem;
 }
 
-.footer-phone,
-.footer-email {
-    display: inline-block;
+.footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.8rem;
+    margin-top: 0.35rem;
+}
+
+.footer-contact a {
     margin-top: 0.35rem;
     color: var(--mint);
     font-size: 0.92rem;
@@ -522,14 +533,8 @@ footer span {
     text-underline-offset: 0.22rem;
 }
 
-.footer-phone {
-    margin-right: 0.8rem;
-}
-
-.footer-phone:hover,
-.footer-phone:focus-visible,
-.footer-email:hover,
-.footer-email:focus-visible {
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
     color: white;
 }
 
