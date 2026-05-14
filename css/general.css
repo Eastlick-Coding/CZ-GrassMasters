@@ -15,12 +15,15 @@
 }
 
 html {
+    background: var(--grass-dark);
+    overscroll-behavior-y: none;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     color: var(--ink);
@@ -28,6 +31,7 @@ body {
     background:
         radial-gradient(circle at 14% 8%, rgba(207, 252, 255, 0.88) 0 18rem, transparent 18.5rem),
         linear-gradient(135deg, var(--mint-light) 0%, #f8fff8 38%, var(--grass-light) 100%);
+    overflow-x: hidden;
 }
 
 a {
@@ -104,7 +108,7 @@ img {
     white-space: nowrap;
 }
 
-nav {
+.header-nav {
     display: flex;
     align-items: center;
     gap: 0.4rem;
@@ -114,8 +118,9 @@ nav {
     border-radius: 999px;
 }
 
-nav a {
+.header-nav a {
     min-height: 3.35rem;
+    min-width: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,13 +133,13 @@ nav a {
     transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
-nav a.active {
+.header-nav a.active {
     color: white;
     background: var(--grass-dark);
 }
 
-nav a:hover,
-nav a:focus-visible {
+.header-nav a:hover,
+.header-nav a:focus-visible {
     color: white;
     background: var(--grass-dark);
     transform: translateY(-1px);
@@ -198,6 +203,7 @@ h1 {
 }
 
 .service-highlights span {
+    flex: 0 0 auto;
     padding: 0.56rem 0.78rem;
     border: 1px solid rgba(53, 134, 0, 0.2);
     border-radius: 999px;
@@ -525,7 +531,7 @@ footer span {
 }
 
 .footer-contact a {
-    margin-top: 0.35rem;
+    width: max-content;
     color: var(--mint);
     font-size: 0.92rem;
     font-weight: 800;
@@ -601,12 +607,12 @@ footer span {
         flex-direction: column;
     }
 
-    nav {
+    .header-nav {
         width: 100%;
         justify-content: space-between;
     }
 
-    nav a {
+    .header-nav a {
         flex: 1;
         text-align: center;
     }
@@ -656,11 +662,13 @@ footer span {
         white-space: normal;
     }
 
-    nav {
+    .header-nav {
         border-radius: 8px;
+        gap: 0.25rem;
+        padding: 0.25rem;
     }
 
-    nav a {
+    .header-nav a {
         min-height: 3.1rem;
         padding: 0 0.65rem;
         border-radius: 7px;
