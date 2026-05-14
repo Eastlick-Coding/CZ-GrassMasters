@@ -511,6 +511,7 @@ footer span {
     font-size: 0.92rem;
 }
 
+.footer-phone,
 .footer-email {
     display: inline-block;
     margin-top: 0.35rem;
@@ -521,6 +522,12 @@ footer span {
     text-underline-offset: 0.22rem;
 }
 
+.footer-phone {
+    margin-right: 0.8rem;
+}
+
+.footer-phone:hover,
+.footer-phone:focus-visible,
 .footer-email:hover,
 .footer-email:focus-visible {
     color: white;
