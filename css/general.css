@@ -544,6 +544,10 @@ footer span {
     color: white;
 }
 
+.footer-credit {
+    margin-top: 0.45rem;
+}
+
 .footer-brand {
     display: flex;
     align-items: center;
